@@ -2,9 +2,52 @@
 <html>
 <head>
     <title>ResumePilot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+
+<div class="container">
+
     <h1>ResumePilot</h1>
-    <p>Build professional resumes with AI.</p>
+
+<form action="/preview" method="POST">
+
+    <label>Full Name</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Email</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Education</label><br>
+    <textarea name="education"></textarea><br><br>
+
+    <label>Skills</label><br>
+    <textarea name="skills"></textarea><br><br>
+
+    <label>Projects</label><br>
+    <textarea name="projects"></textarea><br><br>
+
+    <label>Experience</label><br>
+    <textarea name="experience"></textarea><br><br>
+
+    <label>Phone Number</label><br>
+    <input type="text" name="phone"><br><br>
+
+    <label>LinkedIn</label><br>
+    <input type="text" name="linkedin"><br><br>
+
+    <label>GitHub</label><br>
+    <input type="text" name="github"><br><br>
+
+    <label>Certifications</label><br>
+    <textarea name="certifications"></textarea><br><br>
+
+    <label>Professional Summary</label><br>
+    <textarea name="summary"></textarea><br><br>
+
+    <button type="submit">Generate Resume</button>
+
+</form>
+
 </body>
 </html>

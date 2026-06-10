@@ -1,53 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ResumePilot</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
-<div class="container">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">ResumePilot</div>
+    </nav>
 
-    <h1>ResumePilot</h1>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Create Professional Resumes in Minutes</h1>
+        <p>
+            Build beautiful, job-ready resumes with ResumePilot.
+            Fast, simple, and completely free.
+        </p>
 
-<form action="/preview" method="POST">
+        <a href="#resume-form">
+            <button class="hero-btn">
+                Build Resume
+            </button>
+        </a>
+    </section>
 
-    <label>Full Name</label><br>
-    <input type="text" name="name" required><br><br>
+    <!-- Form Section -->
+    <div class="container" id="resume-form">
 
-    <label>Email</label><br>
-    <input type="email" name="email" required><br><br>
+        <h2>Resume Details</h2>
 
-    <label>Education</label><br>
-    <textarea name="education"></textarea><br><br>
+        <form action="/preview" method="POST">
 
-    <label>Skills</label><br>
-    <textarea name="skills"></textarea><br><br>
+            <label>Full Name</label>
+            <input type="text" name="name" required>
 
-    <label>Projects</label><br>
-    <textarea name="projects"></textarea><br><br>
+            <label>Email</label>
+            <input type="email" name="email" required>
 
-    <label>Experience</label><br>
-    <textarea name="experience"></textarea><br><br>
+            <label>Phone Number</label>
+            <input type="text" name="phone">
 
-    <label>Phone Number</label><br>
-    <input type="text" name="phone"><br><br>
+            <label>LinkedIn</label>
+            <input type="text" name="linkedin">
 
-    <label>LinkedIn</label><br>
-    <input type="text" name="linkedin"><br><br>
+            <label>GitHub</label>
+            <input type="text" name="github">
 
-    <label>GitHub</label><br>
-    <input type="text" name="github"><br><br>
+            <label>Professional Summary</label>
+            <textarea name="summary"></textarea>
 
-    <label>Certifications</label><br>
-    <textarea name="certifications"></textarea><br><br>
+            <label>Education</label>
+            <textarea name="education"></textarea>
 
-    <label>Professional Summary</label><br>
-    <textarea name="summary"></textarea><br><br>
+            <label>Skills</label>
+            <textarea name="skills"></textarea>
 
-    <button type="submit">Generate Resume</button>
+            <label>Projects</label>
+            <textarea name="projects"></textarea>
 
-</form>
+            <label>Experience</label>
+            <textarea name="experience"></textarea>
+
+            <label>Certifications</label>
+            <textarea name="certifications"></textarea>
+
+            <button type="submit">
+                Generate Resume
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- Features -->
+    <section class="features">
+
+        <div class="feature-card">
+            <h3>Professional Layout</h3>
+            <p>Create clean and modern resumes.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Easy to Use</h3>
+            <p>No signup required. Just fill and generate.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Future AI Features</h3>
+            <p>ATS scoring and resume improvement coming soon.</p>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>ResumePilot © 2026</p>
+    </footer>
 
 </body>
 </html>

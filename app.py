@@ -17,11 +17,11 @@ def preview():
     "phone": request.form.get("phone"),
     "linkedin": request.form.get("linkedin"),
     "github": request.form.get("github"),
+    "summary": request.form.get("summary"),
     "education": request.form.get("education"),
     "skills": request.form.get("skills"),
     "projects": request.form.get("projects"),
     "experience": request.form.get("experience"),
-    "summary": request.form.get("summary"),
     "certifications": request.form.get("certifications")
 }
     
